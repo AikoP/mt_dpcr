@@ -12,14 +12,14 @@ Requirements include
 
 ## Installation & General
 
-All scripts are supposed to be run in the root folder `/dpcr`.
+All scripts are supposed to be run in the root folder `/mt_dpcr`.
 
 ### a. Cloning
 
 Clone Repository:
 
 ```git
-git clone https://github.com/AikoP/dpcr
+git clone https://github.com/AikoP/mt_dpcr
 cd dpcr
 ```
 
@@ -89,7 +89,7 @@ samples, sample_stats = generator.getSamples(knns, 100, hidden_range = (3,6), it
 print ("   ..done! (%.1fs) ---> #samples: %d" % (time.time() - start, len(samples)))
 ```
 
-This generate roughly 450 samples for each input model.
+This generates roughly 450 samples for each input model.
 See `evaluation/cross_validation.ipynb` for more details.
 
 ## Reconstruction
