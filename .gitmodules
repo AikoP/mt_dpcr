@@ -1,0 +1,3 @@
+[submodule "external/dgcnn"]
+	path = external/dgcnn
+	url = https://github.com/AnTao97/dgcnn.pytorch.git

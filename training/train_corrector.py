@@ -103,7 +103,7 @@ def train(
         safe_descent = True,
         activation_type = 'mish',
         activation_args = {},
-        io = IOStream('run.log'),
+        io = None,
         dynamic_lr = True,
         dropout = 0,
         rotations = False,

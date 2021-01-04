@@ -198,7 +198,7 @@ def train(
         safe_descent = True,
         activation_type = 'mish',
         activation_args = {},
-        io = IOStream('run.log'),
+        io = None,
         dynamic_lr = True,
         dropout = 0,
         rotations = False,
@@ -655,7 +655,8 @@ if __name__ == "__main__":
 
     train_data_dict = getDataPaths()
 
-    parser.add_argument('--train_data', type=str, required=True, choices=list(train_data_dict.keys()), metavar='T', help='choose type of training data')
+    # parser.add_argument('--train_data', type=str, required=True, choices=list(train_data_dict.keys()), metavar='T', help='choose type of training data')
+    parser.add_argument('--dataset', required=True, type=str, default='multi_faces', metavar='D', choices=list(train_data_dict.keys()), help='Training dataset to use')
     parser.add_argument('--batch_size', type=int, default=4, metavar='B', help='Size of batch)')
     parser.add_argument('--epochs', type=int, default=100, metavar='E', help='number of epochs to train ')
     parser.add_argument('--lr', type=float, default=0.0005, metavar='LR', help='learning rate')
@@ -688,7 +689,7 @@ if __name__ == "__main__":
     start = time.time()
 
     train_data = None
-    with open(train_data_dict[args.train_data]['base'] + '/' + args.train_data + '_train_data', 'rb') as file:
+    with open(train_data_dict[args.dataset]['base'] + '/' + args.dataset + '_train_data', 'rb') as file:
         train_data = torch.load(file, map_location=torch.device('cpu'))
 
     print ("  > done! (%.2fs)" % (time.time() - start))
@@ -697,7 +698,7 @@ if __name__ == "__main__":
 
     now = datetime.now()
     exp_dir = str("training/checkpoints/predictor_"
-        + args.train_data + "_"
+        + args.dataset + "_"
         + args.model + "_"
         + args.activation +  "_"
         + args.optimizer

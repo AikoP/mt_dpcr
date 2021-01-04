@@ -491,7 +491,7 @@ def getTrainingSet(
     # Create Train Data #################################################################
 
     print ("\nReading train models.. \n")
-    train_models, train_knns = readModels(train_model_paths, device=device)
+    train_models, train_knns = readModels(train_model_paths, device=device, incrementKNNid = False)
 
     print ("\nGenerating train samples for %d models.." % (len(train_models)))
     start = time.time()
@@ -529,7 +529,7 @@ def getTrainingSet(
     # Validation Data Generation ########################################################
 
     print ("\nReading validation models.. \n")
-    val_models, val_knns = readModels(validation_model_paths, device=device)
+    val_models, val_knns = readModels(validation_model_paths, device=device, incrementKNNid = False)
 
     print ("\nGenerating validation samples for %d models.." % (len(val_models)))
     start = time.time()

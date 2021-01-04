@@ -28,7 +28,7 @@ cd dpcr
 The preferred way is to add paths to the `utils/generator.py` file and then call the generator as follows:
 
 ```python
-python ./utils/generator.py --dataset=multi_simple_shapes --train_size=200 --test_size=20 --val_size=100 --h_min=3 --h_max=16 --n_min=3 --n_max=11
+python ./utils/generator.py --dataset=multi_simple_shapes --train_size=200 --test_size=20 --val_size=100 --h_min=3 --h_max=6 --n_min=3 --n_max=6
 ```
 
 This will generate a training/test/validation file in the base directory of the given dataset.
