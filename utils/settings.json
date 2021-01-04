@@ -1,0 +1,10 @@
+{
+    "editor.fontFamily": "Inconsolata, Consolas, 'Courier New', monospace",
+    "editor.fontSize": 15,
+    "python.jediEnabled": false,
+    "python.pythonPath": "C:\\Users\\Aiko\\AppData\\Local\\Programs\\Python\\Python36\\python.exe",
+    "window.zoomLevel": 0,
+    "workbench.colorTheme": "One Dark Pro",
+    "terminal.integrated.shell.windows": "C:\\WINDOWS\\System32\\cmd.exe",
+    "workbench.colorCustomizations": {}
+}
