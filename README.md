@@ -28,7 +28,7 @@ cd dpcr
 The preferred way is to add paths to the `utils/generator.py` file and then call the generator as follows:
 
 ```python
-python ./utils/generator.py --dataset=multi_faces --train_size=200 --test_size=20 --val_size=100 --h_min=3 --h_max=16 --n_min=3 --n_max=11
+python ./utils/generator.py --dataset=multi_simple_shapes --train_size=200 --test_size=20 --val_size=100 --h_min=3 --h_max=16 --n_min=3 --n_max=11
 ```
 
 This will generate a training/test/validation file in the base directory of the given dataset.
@@ -38,8 +38,8 @@ This will generate a training/test/validation file in the base directory of the 
 After having generated the train file, training can be started by running
 
 ```python
-python ./training/train_detector.py --dataset=multi_faces --epochs=10 --batch_size=4 --lr=0.0005 --model=cnet
-python ./training/train_corrector.py --dataset=multi_faces --epochs=10 --batch_size=4 --lr=0.0005 --model=cnet
+python ./training/train_detector.py --dataset=multi_simple_shapes --epochs=10 --batch_size=4 --lr=0.0005 --model=cnet
+python ./training/train_corrector.py --dataset=multi_simple_shapes --epochs=10 --batch_size=4 --lr=0.0005 --model=cnet
 ```
 
 This will generate checkpoints after each epoch in `training/checkpoints/../../`.
